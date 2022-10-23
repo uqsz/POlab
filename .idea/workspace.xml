@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c11c239-4ca9-4fa5-a96d-97bb4c710048" name="Changes" comment="lab2 - poprawiony">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +60,7 @@
     "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.Vector2dTest">
+  <component name="RunManager" selected="Application.World">
     <configuration name="Unnamed" type="AntRunConfiguration" nameIsGenerated="true">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -68,7 +71,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
-      <option name="PROGRAM_PARAMETERS" value="r l u d f l l re dfl l" />
+      <option name="PROGRAM_PARAMETERS" value="r f f f l f f f" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,7 +227,7 @@
       <workItem from="1666112210387" duration="6159000" />
       <workItem from="1666120887714" duration="2695000" />
       <workItem from="1666530454014" duration="1784000" />
-      <workItem from="1666532313938" duration="1918000" />
+      <workItem from="1666532313938" duration="6206000" />
     </task>
     <task id="LOCAL-00001" summary="lab2">
       <created>1666116070361</created>
@@ -261,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666534084196</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lab2 - poprawiony">
+      <created>1666534259354</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666534259354</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lab2 - poprawiony">
+      <created>1666534310965</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666534310965</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
