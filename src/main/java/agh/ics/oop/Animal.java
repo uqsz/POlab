@@ -16,19 +16,14 @@ class Animal {
     public void move(MoveDirection direction){
         Vector2d left_down_corner = new Vector2d(0,0);
         Vector2d right_up_corner = new Vector2d(4,4);
+
         Vector2d new_position = this.position_;
 
-        if (direction == MoveDirection.LEFT){
-            this.orientation_=this.orientation_.previous();
-        }
-        else if (direction == MoveDirection.RIGHT) {
-            this.orientation_=this.orientation_.next();
-        }
-        else if (direction == MoveDirection.FORWARD){
-            new_position = new_position.add(this.orientation_.toUnitVector());
-        }
-        else if (direction == MoveDirection.BACKWARD){
-            new_position = new_position.add(this.orientation_.toUnitVector().opposite());
+        switch(direction) {
+            case LEFT -> this.orientation_ = this.orientation_.previous();
+            case RIGHT -> this.orientation_ = this.orientation_.next();
+            case FORWARD -> new_position = new_position.add(this.orientation_.toUnitVector());
+            case BACKWARD -> new_position = new_position.add(this.orientation_.toUnitVector().opposite());
         }
         if (new_position.follows(left_down_corner) && new_position.precedes(right_up_corner)) {this.position_=new_position;}//*
     }
