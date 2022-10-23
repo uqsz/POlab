@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c11c239-4ca9-4fa5-a96d-97bb4c710048" name="Changes" comment="lab2 - poprawiony">
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/OptionsParser.java" afterDir="false" />
+    <list default="true" id="0c11c239-4ca9-4fa5-a96d-97bb4c710048" name="Changes" comment="lab3 - bez testów">
+      <change afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/PetMovesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Vector2d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,12 +82,12 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="agh.ics.oop.World" />
       <module name="oolab.main" />
-      <option name="PROGRAM_PARAMETERS" value="r f f f l f f f" />
+      <option name="PROGRAM_PARAMETERS" value="r" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PetMovesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -89,7 +100,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.MapDirectionTest&quot;" />
+            <option value="&quot;agh.ics.oop.PetMovesTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -99,7 +110,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PetMovesTest.final_orientation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -112,7 +123,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.Vector2dTest&quot;" />
+            <option value="&quot;agh.ics.oop.PetMovesTest.final_orientation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -122,7 +133,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest.VectorPrecedes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PetMovesTest.final_position" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -135,7 +146,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.Vector2dTest.VectorPrecedes&quot;" />
+            <option value="&quot;agh.ics.oop.PetMovesTest.final_position&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,7 +156,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest.VectorUpperRight" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PetMovesTest.map_borders" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -158,7 +169,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;agh.ics.oop.Vector2dTest.VectorUpperRight&quot;" />
+            <option value="&quot;agh.ics.oop.PetMovesTest.map_borders&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -168,20 +179,28 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Vector2dTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="oolab.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.ics.oop.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="agh.ics.oop" />
-      <option name="MAIN_CLASS_NAME" value="agh.ics.oop.Vector2dTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="PetMovesTest.parser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.PetMovesTest.parser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="Vector2dTest.VectorOpposite" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="oolab.main" />
@@ -196,20 +215,20 @@
     <list>
       <item itemvalue="Ant Target.Unnamed" />
       <item itemvalue="Application.World" />
-      <item itemvalue="Gradle.Vector2dTest" />
-      <item itemvalue="Gradle.Vector2dTest.VectorPrecedes" />
-      <item itemvalue="Gradle.Vector2dTest.VectorUpperRight" />
-      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.PetMovesTest" />
+      <item itemvalue="Gradle.PetMovesTest.final_position" />
+      <item itemvalue="Gradle.PetMovesTest.map_borders" />
+      <item itemvalue="Gradle.PetMovesTest.parser" />
+      <item itemvalue="Gradle.PetMovesTest.final_orientation" />
       <item itemvalue="JUnit.Vector2dTest.VectorOpposite" />
-      <item itemvalue="JUnit.Vector2dTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Vector2dTest" />
-        <item itemvalue="Gradle.MapDirectionTest" />
-        <item itemvalue="Gradle.Vector2dTest.VectorUpperRight" />
-        <item itemvalue="Gradle.Vector2dTest.VectorPrecedes" />
-        <item itemvalue="JUnit.Vector2dTest" />
+        <item itemvalue="Gradle.PetMovesTest" />
+        <item itemvalue="Gradle.PetMovesTest.parser" />
+        <item itemvalue="Gradle.PetMovesTest.map_borders" />
+        <item itemvalue="Gradle.PetMovesTest.final_position" />
+        <item itemvalue="Gradle.PetMovesTest.final_orientation" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +246,7 @@
       <workItem from="1666112210387" duration="6159000" />
       <workItem from="1666120887714" duration="2695000" />
       <workItem from="1666530454014" duration="1784000" />
-      <workItem from="1666532313938" duration="6206000" />
+      <workItem from="1666532313938" duration="12990000" />
     </task>
     <task id="LOCAL-00001" summary="lab2">
       <created>1666116070361</created>
@@ -278,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666534310965</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lab3 - bez testów">
+      <created>1666538563689</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666538563689</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,6 +362,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab2" />
     <MESSAGE value="lab2 - poprawiony" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab2 - poprawiony" />
+    <MESSAGE value="lab3 - bez testów" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3 - bez testów" />
   </component>
 </project>

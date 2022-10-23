@@ -14,9 +14,7 @@ public class World {
 
     public static void main(String[] args) {
         System.out.println("Start");
-        Animal puszek=new Animal();
-        MoveDirection[] moves=OptionsParser.parse(args);
-        run(moves,puszek);
+        Animal puszek = new Animal();
         System.out.println(puszek.toString());
         System.out.println("Stop");
     }

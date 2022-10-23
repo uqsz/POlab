@@ -10,6 +10,9 @@ class Animal {
     public boolean isAt(Vector2d position){
         return this.position_.equals(position);
     }
+    public boolean isOriented(MapDirection orientation){
+        return this.orientation_.equals(orientation);
+    }
     public void move(MoveDirection direction){
         Vector2d up = new Vector2d(0,1);
         Vector2d right = new Vector2d(1,0);
