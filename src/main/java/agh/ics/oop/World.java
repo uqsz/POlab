@@ -2,57 +2,37 @@ package agh.ics.oop;
 import java.util.Arrays;
 
 public class World {
-    public static Direction[] convert(String[] directions) {
+    public static MoveDirection[] convert(String[] directions) {
         int i=0;
-        Direction[] tab = new Direction[directions.length];
-        for (String direction : directions) {
-            switch (direction) {
-                case "f":
-                    tab[i]=Direction.FORWARD;
-                    i++;
-                    break;
-                case "b":
-                    tab[i]=Direction.BACKWARD;
-                    i++;
-                    break;
-                case "l":
-                    tab[i]=Direction.LEFT;
-                    i++;
-                    break;
-                case "r":
-                    tab[i]=Direction.RIGHT;
-                    i++;
-                    break;
-                default:
-                    break;
+        MoveDirection[] tab = new MoveDirection[directions.length];
+        for (String element : directions) {
+            switch (element) {
+                case "f": tab[i]=MoveDirection.FORWARD; i++; break;
+                case "b": tab[i]=MoveDirection.BACKWARD; i++; break;
+                case "l": tab[i]=MoveDirection.LEFT; i++; break;
+                case "r": tab[i]=MoveDirection.RIGHT; i++; break;
+                default: break;
             };
         }
-        Direction dir[] = Arrays.copyOfRange(tab,0,i);
-        return dir;
+        MoveDirection result[] = Arrays.copyOfRange(tab,0,i);
+        return result;
     }
-    public static void run(Direction[] tab){
-        for(Direction direction : tab){
-            String text = switch(direction) {
+    public static void run(MoveDirection[] tab){
+        for(MoveDirection element : tab){
+            System.out.println(switch(element) {
                 case FORWARD -> "Zwierzak idzie do przodu";
                 case BACKWARD -> "Zwierzak idzie do tyłu";
                 case LEFT -> "Zwierzak idzie w lewo";
                 case RIGHT -> "Zwierzak idzie w prawo";
-            };
-            System.out.println(text);
+            });
         }
     }
 
     public static void main(String[] args) {
         System.out.println("Start");
-        Direction[] dir=convert(args);
-        run(dir);
+        MoveDirection[] moves=convert(args);
+        run(moves);
         System.out.println("Stop");
-        Vector2d position1 = new Vector2d(1,2);
-        System.out.println(position1);
-        Vector2d position2 = new Vector2d(-2,1);
-        System.out.println(position2);
-        System.out.println(position1.add(position2));
-        System.out.println(MapDirection.SOUTH.toUnitVector());
     }
 }
 
