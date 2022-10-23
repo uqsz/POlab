@@ -46,6 +46,8 @@ class Animal {
                 case WEST -> right;
             });
         }
-        if (new_position.follows(left_down_corner) && new_position.precedes(right_up_corner)) {this.position_=new_position;}
+        if (new_position.follows(left_down_corner) && new_position.precedes(right_up_corner)) {this.position_=new_position;}//*
     }
+    //Odpowiedz na podpunkt 10: nalezy stworzyc tablice 2d jako model naszej plaszczyzny, ktora bedzie przechowywala wartosci true jesli dane pole jest zajete przez zwierzaka albo false w przeciwnym wypadku,
+    //przy wykonywaniu modulu move, w warunku oznaczonym "*" nalezy dodatkowo sprawdzic, czy nowa pozycja jest wolna, jesli warunki zostaną spelnione ti zajac ją, zwolnic poprzednią oraz zaktualizowac pozycje obiektu
 }
