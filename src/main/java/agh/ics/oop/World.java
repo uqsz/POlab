@@ -15,7 +15,7 @@ public class World {
     public static void main(String[] args) {
         System.out.println("Start");
         Animal puszek = new Animal();
-        System.out.println(puszek.toString());
+        System.out.println(puszek);
         System.out.println("Stop");
     }
 }

@@ -14,14 +14,8 @@ class Animal {
         return this.orientation_.equals(orientation);
     }
     public void move(MoveDirection direction){
-        Vector2d up = new Vector2d(0,1);
-        Vector2d right = new Vector2d(1,0);
-        Vector2d down = new Vector2d(0,-1);
-        Vector2d left = new Vector2d(-1,0);
-
         Vector2d left_down_corner = new Vector2d(0,0);
         Vector2d right_up_corner = new Vector2d(4,4);
-
         Vector2d new_position = this.position_;
 
         if (direction == MoveDirection.LEFT){
@@ -31,20 +25,10 @@ class Animal {
             this.orientation_=this.orientation_.next();
         }
         else if (direction == MoveDirection.FORWARD){
-            new_position = new_position.add(switch(this.orientation_){
-                case NORTH -> up;
-                case EAST -> right;
-                case SOUTH -> down;
-                case WEST -> left;
-            });
+            new_position = new_position.add(this.orientation_.toUnitVector());
         }
         else if (direction == MoveDirection.BACKWARD){
-            new_position = new_position.add(switch(this.orientation_){
-                case NORTH -> down;
-                case EAST -> left;
-                case SOUTH -> up;
-                case WEST -> right;
-            });
+            new_position = new_position.add(this.orientation_.toUnitVector().opposite());
         }
         if (new_position.follows(left_down_corner) && new_position.precedes(right_up_corner)) {this.position_=new_position;}//*
     }

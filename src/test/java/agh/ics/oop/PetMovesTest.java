@@ -1,7 +1,9 @@
 package agh.ics.oop;
+
 import org.junit.jupiter.api.Test;
-import java.util.Arrays;
+
 import static agh.ics.oop.MoveDirection.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PetMovesTest {
@@ -55,7 +57,7 @@ public class PetMovesTest {
         MoveDirection[] moves1 = OptionsParser.parse(dir1);
         MoveDirection[] moves2 = OptionsParser.parse(dir2);
 
-        assertTrue(Arrays.equals(moves1,moves1_should_be));
-        assertTrue(Arrays.equals(moves2,moves2_should_be));
+        assertArrayEquals(moves1, moves1_should_be);
+        assertArrayEquals(moves2, moves2_should_be);
     }
 }

@@ -7,6 +7,9 @@
     <list default="true" id="0c11c239-4ca9-4fa5-a96d-97bb4c710048" name="Changes" comment="lab3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/agh/ics/oop/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/PetMovesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/PetMovesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vector2dTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/agh/ics/oop/Vector2dTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +87,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MapDirectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.MapDirectionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="PetMovesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -98,52 +124,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;agh.ics.oop.PetMovesTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PetMovesTest.final_orientation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.PetMovesTest.final_orientation&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="PetMovesTest.final_position" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;agh.ics.oop.PetMovesTest.final_position&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -199,6 +179,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Vector2dTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;agh.ics.oop.Vector2dTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Vector2dTest.VectorOpposite" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="oolab.main" />
       <option name="PACKAGE_NAME" value="" />
@@ -212,20 +215,20 @@
     <list>
       <item itemvalue="Ant Target.Unnamed" />
       <item itemvalue="Application.World" />
+      <item itemvalue="Gradle.MapDirectionTest" />
+      <item itemvalue="Gradle.Vector2dTest" />
       <item itemvalue="Gradle.PetMovesTest" />
-      <item itemvalue="Gradle.PetMovesTest.final_position" />
       <item itemvalue="Gradle.PetMovesTest.map_borders" />
       <item itemvalue="Gradle.PetMovesTest.parser" />
-      <item itemvalue="Gradle.PetMovesTest.final_orientation" />
       <item itemvalue="JUnit.Vector2dTest.VectorOpposite" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.PetMovesTest" />
         <item itemvalue="Gradle.PetMovesTest.parser" />
+        <item itemvalue="Gradle.Vector2dTest" />
+        <item itemvalue="Gradle.MapDirectionTest" />
         <item itemvalue="Gradle.PetMovesTest.map_borders" />
-        <item itemvalue="Gradle.PetMovesTest.final_position" />
-        <item itemvalue="Gradle.PetMovesTest.final_orientation" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +247,7 @@
       <workItem from="1666120887714" duration="2695000" />
       <workItem from="1666530454014" duration="1784000" />
       <workItem from="1666532313938" duration="13307000" />
-      <workItem from="1666545862547" duration="603000" />
+      <workItem from="1666545862547" duration="1226000" />
     </task>
     <task id="LOCAL-00001" summary="lab2">
       <created>1666116070361</created>
@@ -309,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666545394739</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lab3">
+      <created>1666546481566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666546481566</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
