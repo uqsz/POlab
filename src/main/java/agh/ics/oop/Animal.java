@@ -1,5 +1,7 @@
 package agh.ics.oop;
 
+import static agh.ics.oop.World.UPPER_BOUND;
+
 class Animal {
     private Vector2d position = new Vector2d(2,2);
     private MapDirection orientation = MapDirection.NORTH;
@@ -14,9 +16,6 @@ class Animal {
         return this.orientation.equals(orientation);
     }
     public void move(MoveDirection direction){
-        Vector2d left_down_corner = new Vector2d(0,0);
-        Vector2d right_up_corner = new Vector2d(4,4);
-
         Vector2d newPosition = this.position;
 
         switch(direction) {
@@ -25,7 +24,7 @@ class Animal {
             case FORWARD -> newPosition = newPosition.add(this.orientation.toUnitVector());
             case BACKWARD -> newPosition = newPosition.add(this.orientation.toUnitVector().opposite());
         }
-        if (newPosition.follows(left_down_corner) && newPosition.precedes(right_up_corner)) {this.position=newPosition;}//*
+        if (newPosition.follows(World.LOWER_BOUND) && newPosition.precedes(World.UPPER_BOUND)) {this.position=newPosition;}//*
     }
     //Odpowiedz na podpunkt 10: nalezy stworzyc tablice 2d jako model naszej plaszczyzny, ktora bedzie przechowywala wartosci true jesli dane pole jest zajete albo false w przeciwnym wypadku,
     //przy wyykonywaniu modulu move w warunku oznaczonym "*" nalezy dodatkowo sprawdzic, czy nowa pozycja jest wolna, jesli warunki zostaną spelnione to zajac ją, zwolnic poprzednią oraz zaktualizowac pozycje obiektu
