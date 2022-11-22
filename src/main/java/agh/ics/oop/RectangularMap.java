@@ -21,12 +21,7 @@ class RectangularMap implements IWorldMap {
     }
     @Override
     public boolean isOccupied(Vector2d position) {
-        for (Animal animal : map) {
-            if (animal.isAt(position)) {
-                return true;
-            }
-        }
-        return false;
+        return objectAt(position) != null;
     }
     @Override
     public boolean canMoveTo(Vector2d pos) {

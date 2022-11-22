@@ -1,17 +1,8 @@
 package agh.ics.oop;
 
-public class Grass {
-    private Vector2d position
-
-    public Grass(Vector2d vector){
-        this.position=vector;
-    }
-    public Vector2d getPosition(){
-        return this.position;
-    }
-
+public record Grass(Vector2d position) {
     @Override
-    public String toString(){
+    public String toString() {
         return "*";
     }
 }
