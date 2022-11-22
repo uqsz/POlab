@@ -29,14 +29,15 @@ abstract class AbstractWorldMap implements IWorldMap{
         return objectAt(position) != null;
     }
 
-    abstract Vector2d[] getCorners();
-
     @Override
     public String toString() {
         MapVisualizer map = new MapVisualizer(this);
-        Vector2d[] corners = getCorners();
-        return map.draw(corners[0], corners[1]);
+
+        return map.draw(getLeftLowerCorner(), getRightHigherCorner());
     }
+
+    abstract Vector2d getLeftLowerCorner();
+    abstract Vector2d getRightHigherCorner();
 
     public abstract void moved(Vector2d position);
 }

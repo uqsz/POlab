@@ -34,24 +34,30 @@ public class GrassField extends AbstractWorldMap{
         return objectAt(position) != null;
     }
 
-    @Override
-    protected Vector2d[] getCorners(){
-
-        Vector2d lower = new Vector2d(1000, 1000);
-        Vector2d upper = new Vector2d(-1000, -1000);
+    protected Vector2d getLeftLowerCorner(){
+        Vector2d lowerBound = new Vector2d(99999, 99999);
         for(Grass grass: fields){
-            lower = lower.lowerLeft(grass.position());
-            upper = upper.upperRight(grass.position());
+            lowerBound = lowerBound.lowerLeft(grass.getPosition());
         }
         for(Animal animal:animalList){
-            lower = lower.lowerLeft(animal.getPosition());
-            upper = upper.upperRight(animal.getPosition());
+            lowerBound = lowerBound.lowerLeft(animal.getPosition());
         }
-        return new Vector2d[]{lower, upper};
+        return lowerBound;
+    }
+    @Override
+    protected Vector2d getRightHigherCorner(){
+        Vector2d upperBound = new Vector2d(-99999, -99999);
+        for(Grass grass: fields){
+            upperBound = upperBound.upperRight(grass.getPosition());
+        }
+        for(Animal animal:animalList){
+            upperBound = upperBound.upperRight(animal.getPosition());
+        }
+        return upperBound;
     }
     private Grass grassAt(Vector2d position) {
         for (Grass grass : fields) {
-            if (grass.position().equals(position)) {
+            if (grass.getPosition().equals(position)) {
                 return grass;
             }
         }
@@ -72,7 +78,7 @@ public class GrassField extends AbstractWorldMap{
             return object;
         }
         for(Grass grass: fields){
-            if(grass.position().equals(position)){
+            if(grass.getPosition().equals(position)){
                 return grass;
             }
         }
