@@ -6,7 +6,7 @@ import static agh.ics.oop.MoveDirection.*;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PetMovesTest {
+/*public class PetMovesTest {
     @Test
     void final_orientation(){
         MoveDirection[] moves1 = new MoveDirection[]{FORWARD, RIGHT, FORWARD, FORWARD, LEFT, LEFT, FORWARD, BACKWARD, RIGHT};
@@ -60,4 +60,4 @@ public class PetMovesTest {
         assertArrayEquals(moves1, moves1_should_be);
         assertArrayEquals(moves2, moves2_should_be);
     }
-}
+}*/

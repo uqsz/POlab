@@ -1,22 +1,13 @@
 package agh.ics.oop;
 
 public class World {
-    public static void run(MoveDirection[] tab, Animal pet){
-        for(MoveDirection element : tab){
-            switch(element) {
-                case FORWARD -> pet.move(MoveDirection.FORWARD);
-                case BACKWARD -> pet.move(MoveDirection.BACKWARD);
-                case LEFT -> pet.move(MoveDirection.LEFT);
-                case RIGHT -> pet.move(MoveDirection.RIGHT);
-            }
-        }
-    }
-
     public static void main(String[] args) {
-        System.out.println("Start");
-        Animal puszek = new Animal();
-        System.out.println(puszek);
-        System.out.println("Stop");
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        IWorldMap map = new RectangularMap(10, 5);
+        Vector2d[] positions = { new Vector2d(2,2), new Vector2d(3,4) };
+        IEngine engine = new SimulationEngine(directions, map, positions);
+        engine.run();
+        System.out.println(map);
     }
 }
 
