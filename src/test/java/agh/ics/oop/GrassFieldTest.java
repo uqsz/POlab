@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GrassFieldTest {
     @Test
     void IWorldMapTest(){
-        IWorldMap map = new GrassField (10);
+        AbstractWorldMap map = new GrassField (10);
         Vector2d pos=new Vector2d(2,2);
         Animal animal = new Animal(map,pos);
         Animal animal2 = new Animal(map,pos);

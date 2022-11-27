@@ -1,11 +1,13 @@
 package agh.ics.oop;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GrassField extends AbstractWorldMap{
-    private final ArrayList<Grass> fields = new ArrayList<>();
+    protected HashMap<Vector2d,Grass> fields = new HashMap<>();
 
     public GrassField(int n){
         generateGrass((int) Math.sqrt(n*10));
@@ -19,68 +21,46 @@ public class GrassField extends AbstractWorldMap{
                 i--;
             }
             else {
-                fields.add(new Grass(new Vector2d(x, y)));
+                fields.put(new Vector2d(x, y),new Grass(new Vector2d(x, y)));
             }
         }
     }
     @Override
     public boolean isOccupied(Vector2d position) {
-        return objectAt(position) != null;
+        return (fields.containsKey(position) || super.isOccupied(position));
     }
 
     protected Vector2d getLeftLowerCorner(){
         Vector2d lowerBound = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
-        for(Grass grass: fields){
-            lowerBound = lowerBound.lowerLeft(grass.getPosition());
+        for(Vector2d position: fields.keySet()){
+            lowerBound = lowerBound.lowerLeft(position);
         }
-        for(Animal animal:animalList){
-            lowerBound = lowerBound.lowerLeft(animal.getPosition());
+        for(Vector2d position: animalMap.keySet()){
+            lowerBound = lowerBound.lowerLeft(position);
         }
         return lowerBound;
     }
     @Override
     protected Vector2d getRightHigherCorner(){
         Vector2d upperBound = new Vector2d(-Integer.MAX_VALUE, -Integer.MAX_VALUE);
-        for(Grass grass: fields){
-            upperBound = upperBound.upperRight(grass.getPosition());
+        for(Vector2d position : fields.keySet()){
+            upperBound = upperBound.upperRight(position);
         }
-        for(Animal animal:animalList){
-            upperBound = upperBound.upperRight(animal.getPosition());
+        for(Vector2d position: animalMap.keySet()){
+            upperBound = upperBound.upperRight(position);
         }
         return upperBound;
     }
     @Override
     public boolean canMoveTo(Vector2d position) {
-        return !(this.objectAt(position) instanceof Animal);
+        return !animalMap.containsKey(position);
     }
-
-    private Grass grassAt(Vector2d position) {
-        for (Grass grass : fields) {
-            if (grass.getPosition().equals(position)) {
-                return grass;
-            }
-        }
-        return null;
-    }
-    @Override
-    public void moved(Vector2d position) {
-        if(grassAt(position) != null){
-            generateGrass(1);
-            fields.remove(this.grassAt(position));
-        }
-    }
-
     @Override
     public Object objectAt(Vector2d position) {
-        Object foundObject = super.objectAt(position);
-        if (foundObject == null) {
-            for (Grass grass : fields) {
-                if (Objects.equals(grass.getPosition(), position)) {
-                    return grass;
-                }
-            }
+        if (super.objectAt(position) == null) {
+            return fields.get(position);
         }
-        return foundObject;
+        return super.objectAt(position);
     }
 }
 

@@ -6,14 +6,9 @@ import java.util.List;
 class RectangularMap extends AbstractWorldMap {
     private final int width;
     private final int height;
-    private final List<Animal> map;
-    private final MapVisualizer mapVisualizer;
-
     public RectangularMap(int width, int height){
         this.width=width;
         this.height=height;
-        this.map=new ArrayList<>();
-        this.mapVisualizer = new MapVisualizer(this);
     }
     @Override
     protected Vector2d getLeftLowerCorner() {
