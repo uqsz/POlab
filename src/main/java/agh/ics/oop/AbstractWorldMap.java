@@ -13,7 +13,6 @@ abstract class AbstractWorldMap implements IWorldMap{
         }
         return false;
     }
-
     @Override
     public Object objectAt(Vector2d position) {
         for(Animal animal:animalList){
@@ -23,22 +22,18 @@ abstract class AbstractWorldMap implements IWorldMap{
         }
         return null;
     }
-
     @Override
     public boolean isOccupied(Vector2d position) {
         return objectAt(position) != null;
     }
-
     @Override
     public String toString() {
         MapVisualizer map = new MapVisualizer(this);
-
         return map.draw(getLeftLowerCorner(), getRightHigherCorner());
     }
 
     abstract Vector2d getLeftLowerCorner();
     abstract Vector2d getRightHigherCorner();
-
-    public abstract void moved(Vector2d position);
+    public abstract boolean canMoveTo(Vector2d position);
 }
 
