@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class RectangularMap implements IWorldMap {
-    int width;
-    int height;
+    private final int width;
+    private final int height;
     private final List<Animal> map;
     private final MapVisualizer mapVisualizer;
 
