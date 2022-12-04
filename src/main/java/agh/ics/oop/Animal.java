@@ -42,7 +42,10 @@ public class Animal {
             case FORWARD -> newPosition = newPosition.add(this.orientation.toUnitVector());
             case BACKWARD -> newPosition = newPosition.add(this.orientation.toUnitVector().opposite());
         }
-        if (this.map.canMoveTo(newPosition)) {this.position=newPosition;}
+        if (this.map.canMoveTo(newPosition)) {
+            positionChanged(position, newPosition);
+            position = newPosition;
+        }
     }
 
     public void removeObserver(IPositionChangeObserver observer) {

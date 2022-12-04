@@ -30,7 +30,7 @@ public class GrassField extends AbstractWorldMap{
         return (fields.containsKey(position) || super.isOccupied(position));
     }
 
-    protected Vector2d getLeftLowerCorner(){
+    public Vector2d getLeftLowerCorner(){
         Vector2d lowerBound = new Vector2d(Integer.MAX_VALUE, Integer.MAX_VALUE);
         for(Vector2d position: fields.keySet()){
             lowerBound = lowerBound.lowerLeft(position);
@@ -41,7 +41,7 @@ public class GrassField extends AbstractWorldMap{
         return lowerBound;
     }
     @Override
-    protected Vector2d getRightHigherCorner(){
+    public Vector2d getRightHigherCorner(){
         Vector2d upperBound = new Vector2d(-Integer.MAX_VALUE, -Integer.MAX_VALUE);
         for(Vector2d position : fields.keySet()){
             upperBound = upperBound.upperRight(position);

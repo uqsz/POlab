@@ -4,17 +4,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-abstract class AbstractWorldMap implements IWorldMap, IPositionChangeObserver{
-    protected final Map<Vector2d, Animal> animalMap=new HashMap<>();;
+public abstract class AbstractWorldMap implements IWorldMap, IPositionChangeObserver{
+    protected final Map<Vector2d, Animal> animalMap=new HashMap<>();
+    protected MapBoundary mapBoundary = new MapBoundary();
 
     @Override
-    public boolean place(Animal animal) {
+    public boolean place(Animal animal) throws IllegalArgumentException {
         if(this.canMoveTo(animal.getPosition())) {
             animalMap.put(animal.getPosition(), animal);
+            mapBoundary.addMapBoundary(animal.getPosition());
             animal.addObserver(this);
             return true;
         }
-        return false;
+        throw new IllegalArgumentException("cannot place animal on"+animal.getPosition());
     }
     @Override
     public Object objectAt(Vector2d position) {
@@ -30,13 +32,14 @@ abstract class AbstractWorldMap implements IWorldMap, IPositionChangeObserver{
         return map.draw(getLeftLowerCorner(), getRightHigherCorner());
     }
 
-    abstract Vector2d getLeftLowerCorner();
-    abstract Vector2d getRightHigherCorner();
+    public abstract Vector2d getLeftLowerCorner();
+    public abstract Vector2d getRightHigherCorner();
     @Override
     public void positionChanged(Vector2d oldPosition, Vector2d newPosition) {
         Animal animal = animalMap.get(oldPosition);
         animalMap.remove(oldPosition);
         animalMap.put(newPosition, animal);
+        this.mapBoundary.positionChanged(oldPosition, newPosition);
     }
 }
 
