@@ -7,16 +7,17 @@ class RectangularMap extends AbstractWorldMap {
     private final int width;
     private final int height;
     public RectangularMap(int width, int height){
+        super();
         this.width=width;
         this.height=height;
     }
     @Override
-    protected Vector2d getLeftLowerCorner() {
+    public Vector2d getLeftLowerCorner() {
         return new Vector2d(width,height);
     }
 
     @Override
-    protected Vector2d getRightHigherCorner() {
+    public Vector2d getRightHigherCorner() {
         return new Vector2d(0,0);
     }
 
